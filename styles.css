@@ -1,0 +1,634 @@
+
+/* reserve space for scrollbar */
+html{
+    scrollbar-gutter: stable;
+}
+
+/* set body width and height as reference to other elements; set background color */
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0; 
+    background-color: hsl(190, 100%, 95%);   
+}
+
+/* class for document container element; give it a flexbox layout for proper positioning of child elements */
+.doc-div{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class that makes introduction section container element visible; give it a flexbox layout */
+.intro-page-visible-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* class that makes introduction section container element invisible; set display property as none to make it invisible */
+.intro-page-invisible-div{
+    display: none;
+}
+
+/* class for heading container element; set the position property and give it a flexbox layout */
+.heading-div{
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+/* class for document heading (h1) element; set user-select property to none to avoid selection of text on double-click */
+.doc-heading{
+     text-align: center;
+     font-family: 'Lucida Sans';
+     font-size: 2.5rem;
+     color: hsl(160, 100%, 20%);
+     margin: 0;
+     user-select: none;
+}
+
+/* class for introduction and instruction text container element; set position property and give it a flexbox layout */
+.doc-intro-div{
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* class for introduction text container element; set padding on left and right; give it a border-box box-sizing and a flexbox layout */
+.intro-section-div{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+ 
+/* class for introduction paragraph element */
+.intro-line-para{
+    font-family: 'Lucida Sans';
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    user-select: none;
+}
+   
+/* class for line 1 of introduction paragraph element */
+.intro-line-1{
+    color: hsl(10, 100%, 50%);
+}
+/* class for line 2 of introduction paragraph element */
+.intro-line-2{
+    color: hsl(280, 100%, 30%);
+}
+/* class for instruction text container element */
+.instruct-div{
+    width: 90%;
+    height: 75%;
+    position: relative;
+    top: 0%;
+}
+/* styling for instruction heading element */
+.instruct-div h5{
+    font-family: Arial;
+    font-size: 1.25rem;
+    text-align: justify;
+    user-select: none;
+}
+/* styling for instruction paragraph element */
+.instruct-div p{
+    position: relative;
+    top: 0%;
+    margin: 0;
+    font-family: Arial;
+    font-size: 1.25rem;
+    text-align: justify;
+    line-height: 1.75rem;
+    user-select: none;
+}
+/* class for container element that contains input field and start button; give it a flexbox layout */
+.selection-start-btn-div{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 65%;
+}
+
+/* class for form element for input field and start button */
+.ques-number-selection-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* class for input field container element */
+.ques-number-selection-div{
+    width: 25%;
+    height: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* class for label element for input field; set cursor property as pointer */
+.ques-number-selection-label{
+    width: 85%;
+    height: 50%;
+    font-family: 'Lucida Sans';
+    font-size: 1.2rem;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+/* class for input element for selecting the number of questions; give it a border and border-radius */
+.ques-number-selection-input{
+    width: 15%;
+    height: 50%;
+    display: flex;
+    border: 1px solid hsl(0, 0%, 70%);
+    border-radius: 10px;
+    text-align: center;
+    background-color: hsl(190, 100%, 95%);
+}
+
+/* styling for input element when in focus; give it a blue border when in focus */
+.ques-number-selection-input:focus{
+  outline: none;
+  border: 2px solid hsl(240, 50%, 50%);
+}
+
+/* class for start button container element */
+.start-btn-div{
+    width: 10%;
+    height: 25%;      
+}
+/* class for start button element */
+.start-btn{
+    background-color: hsl(212, 90%, 41%);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: Arial;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    user-select: none;
+}
+/* styling for button element when hovered by mouse; change background-color and set cursor as pointer when hovered */
+.start-btn:hover{
+    transition: background-color 0.3s ease-in-out;
+    background-color: hsl(212, 90%, 35%);
+    cursor: pointer;
+}
+/* styling for button element when clicked; decrease the size to give a pressed effect */
+.start-btn:active{
+    transform: scale(0.94);    
+}
+
+/* class that makes container element for quiz section invisible */
+.quiz-invisible-div{
+    display: none;
+}
+/* class that makes container element for quiz section visible */
+.quiz-visible-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1% 0 0 5%;
+    box-sizing: border-box;
+}
+/* class that makes quiz form element visible */
+.quiz-form-visible{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* class that makes quiz form element invisible */
+.quiz-form-invisible{
+    display: none;
+}
+/* class that makes container element that contains the question and choices visible */
+.ques-choice-visible-div{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 2%;
+}
+/* class that makes container element containing the question and choices invisible */
+.ques-choice-invisible-div{
+    display: none;
+}
+/* class for container element for question number and text */
+.ques-num-text-div{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* class for span element for question number */
+.ques-num-span{
+    width: 3%;
+    font-family: "Lucida Sans";
+    font-size: 1.25rem;
+    user-select: none;
+}
+/* class for container element for question text */
+.ques-div{
+    width: 80%;
+    font-family: "Lucida Sans";
+    font-size: 1.25rem;
+    user-select: none;
+}
+
+/* class for container element that contains all choices of a particular question */
+.all-choice-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* class for container element that contains individual choice */
+.choice-div{
+    width: 50%;
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* class for radio button */
+.choice-radio-input{
+    width: 2%;
+    height: 2%;
+    position: absolute;
+    left: 10%;
+    cursor: pointer; 
+    margin: 0;     
+}
+
+/* class for label element for radio button; set width as 'max-content' to make the width increase with the text */
+.choice-label{
+    width: max-content;
+    position: absolute;
+    left: 15%;
+    cursor: pointer;
+    font-family: 'Lucida Sans';
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+/* styling for label when hovered; change text color to light blue */
+.choice-label:hover{
+    color: hsl(212, 100%, 70%);   
+}
+/* styling for lable when the corresponding radio input is selected; change text color to blue */
+.choice-radio-input:checked + .choice-label{
+    color: hsl(212, 100%, 50%);
+}
+/* class that makes container element for 'next' button visible */
+.next-btn-visible-div{
+    width: 10%;
+    height: 7.5%;
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    display: flex;
+    justify-content: center;
+}
+/* class that makes container element for 'next' button invisible */
+.next-btn-invisible-div{
+    display: none;
+}
+
+/* class for 'next' button element */
+.next-btn{
+    background-color: hsl(30, 100%, 60%);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: Arial;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    user-select: none;
+}
+/* styling for 'next' button element when hovered; change background-color and set cursor to pointer */
+.next-btn:hover{
+    transition: background-color 0.3s ease-in-out;
+    background-color: hsl(30, 70%, 55%);
+    cursor: pointer;
+}
+/* styling for 'next' button when clicked; decrease the size to give a pressed effect */
+.next-btn:active{
+    transform: scale(0.94); 
+}
+
+/* class that makes container element for 'submit' button visible  */
+.submit-btn-visible-div{
+    width: 10%;
+    height: 7.5%;
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    display: flex;
+    justify-content: center;
+}
+/* class that makes container element for 'submit' button invisible */
+.submit-btn-invisible-div{
+    display: none;
+}
+
+/* class for 'submit' button element */
+.submit-btn{
+    background-color: hsl(145, 70%, 45%);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: Arial;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    user-select: none;
+}
+/* styling for 'submit' button element when hovered */
+.submit-btn:hover{
+    transition: background-color 0.3s ease-in-out;
+    background-color: hsl(145, 70%, 40%);
+    cursor: pointer;
+}
+/* styling for 'submit' button element when clicked */
+.submit-btn:active{
+    transform: scale(0.94);  
+}
+
+/* class that makes container element for score section invisible */
+.quiz-score-form-invisible-div{
+    display: none;
+}
+/* class that makes container element for score section visible */
+.quiz-score-form-visible-div{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* class for container element having the score */
+.quiz-score-div{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class for paragraph element that contains congratulations message */
+.congrat-text-para{
+    font-family: 'Lucida Sans';
+    font-size: 3rem;
+    color: hsl(25, 100%, 50%);
+    user-select: none;
+}
+/* class for paragraph element displaying quiz score text*/
+.quiz-score-para{
+    font-family: 'Lucida Sans';
+    font-size: 3rem;
+    color: hsl(150, 90%, 40%);
+    user-select: none;
+}
+/* class for span elements containing the user score and maximum points */
+.quiz-score-span, .quiz-max-point-span{
+    font-family: 'Lucida Sans';
+    font-size: 3rem;
+    user-select: none;
+}
+
+/* class for form element for 'answers' button and 'refresh' button */
+.refresh-form{
+    width: 40%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* class for container element for 'answers' button */
+.answers-btn-div{
+    width: 25%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+/* class for 'answers' button element */
+.answers-btn{
+    background-color: hsl(50, 100%, 60%);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    color: hsl(40, 100%, 100%);
+    font-family: Arial;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    user-select: none;
+}
+/* styling for 'answers' button when hovered */
+.answers-btn:hover{
+    transition: background-color 0.3s ease-in-out;
+    background-color: hsl(50, 100%, 45%);
+    cursor: pointer;  
+}
+/* styling for 'answers' button when clicked */
+.answers-btn:active{
+    transform: scale(0.94);  
+}
+/* class for container element for 'refresh' button */
+.refresh-btn-div{
+    width: 25%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+/* class for 'refresh' button element */
+.refresh-btn{
+    background-color: hsl(15, 90%, 50%);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: Arial;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    user-select: none;
+}
+/* styling for 'refresh' button when hovered */
+.refresh-btn:hover{
+    transition: background-color 0.3s ease-in-out;
+    background-color: hsl(15, 90%, 45%);
+    cursor: pointer;
+}
+/* styling for 'refresh' button when clicked */
+.refresh-btn:active{
+    transform: scale(0.94);    
+}
+
+/* class that makes container element for solution section visible */
+.solution-page-visible-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 3% 0 0 4%;
+    box-sizing: border-box;
+}
+
+/* class that makes container element for solution section invisible */
+.solution-page-invisible-div{
+    display: none;
+}
+
+/* class for container element that contains individual question block in solution section */
+.solution-page-ques-ans-div{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/* class for container element that contains a question in a question block */
+.solution-page-ques-div{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    color: hsl(160, 100%, 25%);
+}
+/* class for span element that displays question number */
+.solution-page-ques-num-span{
+    width: 3%;
+    font-family: "Lucida Sans";
+     font-size: 1.25rem;
+     user-select: none;
+}
+/* class for container element containing the question text */
+.solution-page-ques-text-div{
+    width: 80%;
+    font-family: "Lucida Sans";
+    font-size: 1.25rem;
+    user-select: none;
+}
+/* class for container element containing answer text */
+.solution-page-ans-div{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+/* class for paragraph element for answer text */
+.solution-page-ans-para{
+    width: 100%;
+    height: 100%;
+    font-family: 'Lucida Sans';
+    font-size: 1.25rem;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: hsl(10, 100%, 30%);
+}
+/* class for form element for 'back' button */
+.back-btn-form{
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* class for container element for 'back' button */
+.back-btn-div{
+    width: 10%;
+    height: 54.71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* class for 'back' button element */
+.back-btn{
+    width: 100%;
+    height: 100%;
+    background-color: hsl(15, 90%, 50%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    user-select: none;
+}
+/* styling for 'back' button element when hovered */
+.back-btn:hover{
+    transition: background-color 0.3s ease-in-out;
+    background-color: hsl(15, 90%, 45%);
+    cursor: pointer;
+}
+/* styling for 'back' button element when clicked */
+.back-btn:active{
+    transform: scale(0.94);    
+}

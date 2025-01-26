@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Quiz To Test Your Knowledge</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- <div> element that contains the document -->
+    <div class="doc-div">
+      <!-- <div> element that contains the "introduction" section -->
+      <div class="intro-page-div">
+        <!-- <div> element that contains the document heading -->
+        <div class="heading-div">
+          <!-- <h1> element for document heading -->
+          <h1 class="doc-heading">WORLD GEOGRAPHY QUIZ</h1>
+        </div>
+        <!-- <div> element that contains the introduction and instruction text -->
+        <div class="doc-intro-div">
+          <!-- <div> element that contains the introduction text -->
+          <div class="intro-section-div">
+            <!-- <p> elements for introduction text -->
+            <p class="intro-line-para intro-line-1">Geography is an interesting subject enriching us with the knowledge of countries and cities, rivers and mountains,
+                                                  latitudes and longitudes and what not! It attracts both learners and travellers alike!
+            </p>
+            <p class="intro-line-para intro-line-2"> If you want to test your geography knowledge, take this quiz and impress your friends with your score.
+                                                   And if you are a beginner, you will definitely learn some new things!
+            </p>
+          </div>
+          <!-- <div> element that contains the instruction text -->
+          <div class="instruct-div">
+            <!-- <span> element that contains the heading for instruction text -->
+            <span class="instruct-heading-span">
+              <!-- <h5> element for instruction text heading -->
+              <h5>Instructions</h5>
+            </span>
+            <!-- <p> element for instruction text -->
+            <p>The quiz contains 5 to 20 questions related to basic geography. You can select the number of questions below. Each question has four choices.
+               Choose one option for each question and submit your answers at the end. 
+               Each correct answer will award you one point. Your score will be displayed at the end of the quiz.
+               So take the quiz and test your geography knowledge. All The Best!
+            </p>
+          </div>
+        </div> 
+        <!-- <div> element that contains question number selection input field and start button -->
+        <div class="selection-start-btn-div">
+          <!-- <form> element for question number selection input field -->
+          <form action="" class="ques-number-selection-form">
+            <!-- <div> element that contains input field for selection of number of questions -->
+            <div class="ques-number-selection-div">
+              <!-- <label> element for input field -->
+              <label for="number-of-questions" class="ques-number-selection-label">Select Number of Questions</label>
+              <!-- <input> element of "number" type to get user input for number of questions -->
+              <input type="number" name="number-of-questions" id="number-of-questions" class="ques-number-selection-input" value="5" min="5" max="20" step="5" required>
+            </div>
+            <!-- <div> element that contains start button -->
+            <div class="start-btn-div">
+              <!-- <button> element for starting the quiz -->
+              <button class="start-btn" type="submit">START QUIZ</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- <div> element that contains "quiz" section-->
+      <div class="quiz-div"></div>
+      <!-- <div> element that contains "score" section -->
+      <div class="quiz-score-form-div">
+        <!-- <div> element that contains score para text -->
+        <div class="quiz-score-div">
+          <!-- <p> element for score text; contains <span> elements to display score and maximum points -->
+          <p class="quiz-score-para">Your Score is <span class="quiz-score-span"></span> out of <span class="quiz-max-point-span"></span></p>
+        </div>
+        <!-- <form> element for "answers" and "refresh" buttons -->
+        <form action="" class="refresh-form">
+          <!-- <div> element that contains 'answers' button -->
+          <div class="answers-btn-div">
+            <!-- <button> element to view correct answers of all questions -->
+            <button type="button" class="answers-btn">ANSWERS</button>
+          </div>
+          <!-- <div> element that contains 'refresh' button -->
+          <div class="refresh-btn-div">
+            <!-- <button> element for page refresh; takes to the introduction section when clicked -->
+            <button type="submit" class="refresh-btn">REFRESH</button>
+          </div>
+        </form>
+      </div>
+      <!-- <div> element that contains "solution" section -->
+      <div class="solution-page-div"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
